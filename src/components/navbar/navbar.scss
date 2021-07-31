@@ -1,0 +1,61 @@
+$black:#1C1C1C;
+$blackSoft:#363636;
+$blackVerySoft:#2E2E2E;
+$blackmate:#252525;
+$white:#E0E0E0;
+$aqua:#48FFBD;
+@mixin btnStyle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $white;
+    transition: 0.2s ease-in-out;
+}
+@keyframes translate_opacity{
+    0%{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    50%{
+        opacity: 80%;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+.navigation-bar{
+    display: grid;
+    grid-template-rows: repeat(3,33.3%);
+    .block{
+        display: flex;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        animation: 1s opacity ;
+        .btn1{
+            animation: 1s translate_opacity;
+            @include btnStyle();
+            background:$black;
+        }
+        .btn2{
+            animation: 1.5s translate_opacity;
+            @include btnStyle();
+            background:$blackSoft;
+        }
+        .btn3{
+            animation: 2s translate_opacity;
+            @include btnStyle();
+            background:$blackVerySoft;
+        }
+        a:hover{
+            background: $aqua;
+            color: $black;
+        }
+    }
+}

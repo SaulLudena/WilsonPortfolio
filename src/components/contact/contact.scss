@@ -1,0 +1,268 @@
+$black:#1C1C1C;
+$blackSoft:#363636;
+$blackVerySoft:#2E2E2E;
+$blackmate:#252525;
+$white:#E0E0E0;
+$aqua:#48FFBD;
+@mixin btnStyle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $white;
+    transition: 0.2s ease-in-out;
+}
+@keyframes translate_opacity{
+    0%{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    50%{
+        opacity: 80%;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+.main-content{
+    height: 100%;
+    width: 80%;
+    max-width: 1600px;
+    margin: auto;
+    overflow-y: scroll;
+    .main-info{
+        height: 100%;
+        .logo{
+            align-items: center;
+            display: flex;
+            height: 15%;
+            margin: auto;
+            a{
+                color: $aqua;
+                font-size:2.5em;
+            }
+        }
+        .align-item-center{
+            .text{
+                animation: 1s translate_opacity;
+                .first-text{
+                    animation: 1s translate_opacity;
+                    font-size: 3em;
+                    color: $white;
+                    font-weight: bold;
+                    padding: 0.2em 0;
+                }
+                .alert-text{
+                    font-size: 1em;
+                    color: $white;
+                    background:$black ;
+                    font-weight: lighter;
+                    padding: 1em ;
+                }
+                .my-form{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 10px;
+                    padding: 0em 0 5em 0;
+
+                    .input-group{
+                        gap: 2px;
+                        color: $white;
+                        display: flex;
+                        flex-direction: column;
+                        label{
+                            padding: 0.51em 0;
+                            font-weight: bold;
+                        }
+                        input{
+                            outline: 0;
+                            background: $black;
+                            border: 0;
+                            padding: 1em 1em;
+                            color: $white;
+                            font-family: 'Raleway', sans-serif;
+                            border-bottom: 6px solid $black;
+                            transition: 0.2s ease-in-out;
+                            border-radius: 5px;
+                        }
+                        input:focus{
+                            border-bottom: 6px solid $aqua;
+                        }
+                        textarea{
+                            outline: 0;
+                            background: $black;
+                            border: 0;
+                            padding: 1em 1em;
+                            color: $white;
+                            font-family: 'Raleway', sans-serif;
+                            border-bottom: 6px solid $black;
+                            transition: 0.2s ease-in-out;
+                            resize: none;
+                            border-radius: 5px;
+                            height: 50%;
+                        }
+                        textarea:focus{
+                            border-bottom: 6px solid $aqua;
+                        }
+                    }
+                    .input-group:nth-child(3){
+                        grid-column: 1/3;
+                    }
+                    .btn-submit{
+                        input{
+                            display: flex;
+                            text-decoration: none;
+                            color: $aqua;
+                            font-size: 1em;
+                            padding: 10px 60px;
+                            border: 1px solid $aqua;
+                            background: $black;
+                            border-radius: 5px;
+                            transition: 0.2s ease-in-out;
+                            cursor: pointer;
+                        }
+                        input:hover{
+                            background-color: $blackmate;    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:882px){
+        .main-content{
+            .main-info{
+                .logo{
+                    height: 10%;
+                }
+                .align-item-center{
+                    height: 70%;
+                    .text{
+                        .first-text{
+                            font-size: 1.5em;
+                            border-radius: 5px;
+                        }
+                        .my-form{
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-gap: 10px;
+                            padding: 0 0 7em 0;
+                            .input-group{
+                                gap: 2px;
+                                color: $white;
+                                display: flex;
+                                flex-direction: column;
+                                label{
+                                    padding: 0.51em 0;
+                                    font-weight: bold;
+                                }
+                                input{
+                                    outline: 0;
+                                    background: $black;
+                                    border: 0;
+                                    padding: 1em 1em;
+                                    color: $white;
+                                    font-family: 'Raleway', sans-serif;
+                                    border-bottom: 6px solid $black;
+                                    transition: 0.2s ease-in-out;
+                                    border-radius: 5px;
+                                }
+                                input:focus{
+                                    border-bottom: 6px solid $aqua;
+                                }
+                                textarea{
+                                    outline: 0;
+                                    background: $black;
+                                    border: 0;
+                                    padding: 1em 1em;
+                                    color: $white;
+                                    font-family: 'Raleway', sans-serif;
+                                    border-bottom: 6px solid $black;
+                                    transition: 0.2s ease-in-out;
+                                    resize: none;
+                                    border-radius: 5px;
+                                    height: 50%;
+                                }
+                                textarea:focus{
+                                    border-bottom: 6px solid $aqua;
+                                }
+                            }
+                            .input-group:nth-child(3){
+                                grid-column: 1/3;
+                            }
+                            .btn-submit{
+                                input{
+                                    display: flex;
+                                    text-decoration: none;
+                                    color: $aqua;
+                                    font-size: 1em;
+                                    padding: 10px 60px;
+                                    border: 1px solid $aqua;
+                                    background: $black;
+                                    border-radius: 5px;
+                                    transition: 0.2s ease-in-out;
+                                    cursor: pointer;
+                                }
+                                input:hover{
+                                    background-color: $blackmate;    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+}
+
+@media screen and (max-width:581px){
+        .main-content{
+            .main-info{
+                .align-item-center{
+                    .text{
+                        .my-form{
+                            grid-template-columns: repeat(1, 1fr);
+                            .input-group{
+                                gap: 0;
+                            }
+                            .input-group:nth-child(3){
+                                grid-column: 1/2;
+                            }
+                            .btn-submit{
+                                padding-bottom: 3em;
+                                input{
+                                    font-size: 0.8em;
+                                    justify-content: center;
+                                    width: 50%;
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+}
+@media screen and (max-width:313px){
+    .main-content{
+        overflow-x: hidden;
+        .main-info{
+            .align-item-center{
+                .text{
+                    .my-form{
+                        grid-template-columns: repeat(1, 1fr);
+                        .input-group{
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

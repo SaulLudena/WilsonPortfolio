@@ -1,0 +1,223 @@
+
+$black:#1C1C1C;
+$blackSoft:#363636;
+$blackVerySoft:#2E2E2E;
+$blackmate:#252525;
+$white:#E0E0E0;
+$aqua:#48FFBD;
+@mixin btnStyle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $white;
+    transition: 0.2s ease-in-out;
+}
+@keyframes translate_opacity{
+    0%{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    50%{
+        opacity: 80%;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+.main-content{
+    height: 100%;
+    width: 80%;
+    max-width: 1600px;
+    margin: auto;
+    overflow-y: scroll;
+    .main-info{
+        height: 100%;
+        .logo{
+            align-items: center;
+            display: flex;
+            height: 15%;
+            margin: auto;
+            a{
+                color: $aqua;
+                font-size:2.5em;
+            }
+        }
+        .align-item-center{
+            .text{
+                animation: 1s translate_opacity ;
+                .first-text{
+                    font-size: 3em;
+                    color: $white;
+                    font-weight: bold;
+                    padding: 0.2em 0;
+                    animation: 1s translate_opacity;
+                }
+                .second-text{
+                    font-size: 1em;
+                    color: $white;
+                    font-weight: lighter;
+                }
+                .card-container{
+                    padding:0 0 6em 0;
+                    .card{
+                        margin: 0 0 2em 0;
+                        background: $black;
+                        padding: 2em 2em;
+                        display: flex;
+                        justify-content: space-between;
+                        border-radius: 5px;
+                        box-shadow: 10px 10px 20px $black;
+                        .card-info{
+                            width: 50%;
+                            .card-title{
+                                font-size: 3em;
+                                color: $aqua;
+                                font-weight: l;
+                                padding: 0.1em 0;
+                            }
+                            .card-description{
+                                padding: 1em 0;
+                                font-size: 1em;
+                                color: $white;
+                                font-weight: lighter;
+                            }
+                            .list{
+                                display: flex;
+                                .list-item{
+                                    list-style: none;
+                                    padding: 0 0.5em 0 0 ;
+                                    color: $aqua;
+                                }
+                            }
+                            .btnr{
+                                padding: 1.5em 0;
+                                .btn{
+                                    text-decoration: none;
+                                    color: $aqua;
+                                    border: 1px solid $aqua;
+                                    padding: 0.5em 1em;
+                                    border-radius: 5px;
+                                    transition: 0.2s ease-in-out;
+                                }
+                                .btn:hover{
+                                    background-color: $blackmate;    
+                                }
+                            }
+                        }
+                        .card-icon{
+                            display: flex;
+                            width: 40%;
+                            align-items: center;
+                            justify-content: center;
+                            i{
+                                color: $aqua;
+                                font-size: 13em;
+                                transition: 0.2s ease-in-out;
+                            }
+                        }
+                    }
+                    .card:nth-child(1){
+                        animation: 1s translate_opacity;
+                    }
+                    .card:nth-child(2){
+                        animation: 1.5s translate_opacity;
+                    }
+                    .card:nth-child(3){
+                        animation: 2s translate_opacity;
+                    }
+                }
+            }
+        }
+    }
+}
+.main-content::-webkit-scrollbar{
+    width:0;
+}
+.main-content::-webkit-scrollbar-thumb{
+    opacity: 0;
+}
+
+@media screen and (max-width:882px){
+        .main-content{
+            .main-info{
+                .logo{
+                    height: 10%;
+                }
+                .align-item-center{
+                    height: 70%;
+                    .text{
+                        .first-text{
+                            font-size: 1.5em;
+                        }
+                        .second-text{
+                            font-size: 0.8em;
+                        }
+                        .card-container{
+                            .card{
+                                .card-info{
+                                    .card-title{
+                                        font-size: 1.5em;
+                                    }
+                                    .card-description{
+                                        font-size: 0.9em;
+                                    }
+                                    .list{
+                                        .list-item{
+                                            font-size: 0.9em;
+                                        }
+                                    }
+                                    .btnr{
+                                        .btn{
+                                            font-size: 0.8em;
+                                        }
+                                    }
+                                }
+                                .card-icon{
+                                    i{
+                                        font-size: 10em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+}
+@media screen and (max-width:517px){
+        .main-content{
+            .main-info{
+                .align-item-center{
+                    .text{
+                        .card-container{
+                            .card{
+                                flex-direction: column;
+                                text-align: center;
+                                .card-info{
+                                    width: 100%;
+                                    .btnr{
+                                        .btn{
+                                            padding: 0.5em 2em;
+                                        }
+                                    }
+                                }
+                                .card-icon{
+                                    width: 100%;
+                                }
+                                .list{
+                                    flex-direction: column;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+}

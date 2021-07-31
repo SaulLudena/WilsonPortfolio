@@ -1,0 +1,161 @@
+$black:#1C1C1C;
+$blackSoft:#363636;
+$blackVerySoft:#2E2E2E;
+$blackmate:#252525;
+$white:#E0E0E0;
+$aqua:#48FFBD;
+@mixin btnStyle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $white;
+    transition: 0.2s ease-in-out;
+}
+@keyframes translate_opacity{
+    0%{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    50%{
+        opacity: 80%;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+
+.main-content_p{
+    height: 100vh;
+    width: 80%;
+    max-width: 1600px;
+    margin: auto;
+    overflow-y: scroll;
+    .main-info_p{
+        height: 100vh;
+        .logo_p{
+            align-items: center;
+            display: flex;
+            height: 15vh;
+            margin: auto;
+            a{
+                animation: 5s opacity-secondary;
+                color: $aqua;
+                font-size:2.5em;
+            }
+        }
+        .align-item-center_p{
+            align-items: center;
+            display: flex;
+            height: 85vh;
+            margin: auto;
+            .text_p{
+                animation: 1s translate_opacity ;
+                .first-text_p{
+                    font-size: 3em;
+                    color: $white;
+                    font-weight: lighter;
+                    animation: 1s translate_opacity ;
+                }
+                .second-text_p{
+                    font-size: 7em;
+                    color: $aqua;
+                }
+                .third-text_p{
+                    font-size: 1em;
+                    color: $white;
+                    font-weight: lighter;
+                    padding: 0 0 1em 0 ;
+                }
+                .btnr_p{
+                    display: flex;  
+                    .btn_p{
+                        display: flex;
+                        text-decoration: none;
+                        color: $aqua;
+                        font-size: 1em;
+                        padding: 10px 60px;
+                        border: 1px solid $aqua;
+                        background: $black;
+                        border-radius: 5px;
+                        transition: 0.2s ease-in-out;
+                    }
+                    .btn_p:hover{
+                        background-color: $blackmate;                           
+                    }
+                }
+                .links_p{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 20%;
+                    height: 12.9vh;
+                    align-items: center;
+                    .link-item_p{
+                        list-style: none;
+                        a{
+                            animation: 3s opacity-secondary;
+                            text-decoration: none;
+                            color: $aqua;
+                            font-size: 3em;
+                            transition: 0.2s ease-in-out;
+                            padding: 0 0.1em;
+                            
+                        }
+                        a:hover{
+                            text-shadow: 0px 0px 5px $aqua;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.main-content_p::-webkit-scrollbar{
+    width:0;
+}
+.main-content_p::-webkit-scrollbar-thumb{
+    opacity: 0;
+}
+
+@media screen and (max-width:882px){
+        .main-content_p{
+            .main-info_p{
+                .logo_p{
+                    height: 10%;
+                }
+                .align-item-center_p{
+                    height: 70%;
+                    .text_p{
+                        .first-text_p{
+                            font-size: 1.5em;
+                        }
+                        .second-text_p{
+                            font-size: 4em;
+                        }
+                        .third-text_p{
+                            font-size: 0.8em;
+                        }
+                        .btnr_p{
+                            .btn_p{
+                                font-size: 0.8em;
+                            }
+                        }
+                        .links_p{
+                            .link-item_p{
+                                list-style: none;
+                                a{
+                                    font-size: 1.5em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+   
+}
