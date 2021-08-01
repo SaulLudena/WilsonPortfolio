@@ -26,6 +26,7 @@ export default function About() {
                                 <li className="list-item"><i className="fab fa-css3"></i><br/><p>Css</p></li>
                                 <li className="list-item"><i className="fab fa-js-square"></i><br/><p>Javascript</p></li>
                                 <li className="list-item"><i className="fab fa-react"></i><br/><p>ReactJs</p></li>
+                                <li className="list-item"><i className="fab fa-react"></i><br/><p>ReactJs</p></li>
                                 <li className="list-item"><i className="fab fa-java"></i><br/><p>Java</p></li>
                                 <li className="list-item"><i className="fas fa-code"></i><br/><p>C#</p></li>
                                 <li className="list-item"><i className="fab fa-php"></i><br/><p>Php</p></li>
